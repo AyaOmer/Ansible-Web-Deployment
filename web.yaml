@@ -1,0 +1,36 @@
+---
+- name: Website
+  hosts: web
+  vars:
+    ansible_python_interpreter: /usr/bin/python3  # Adjust if necessary
+  tasks: 
+    - name: Update apt cache
+      ansible.builtin.apt:
+         update_cache: yes
+
+    - name: Install Apache
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+
+    - name: Create directory for eCommerce
+      ansible.builtin.file:
+        path: /var/www/html/web
+        state: directory    
+
+    - name: Install Git
+      ansible.builtin.apt:
+        name: git
+        state: present
+
+    - name: Clone the repository from GitHub
+      ansible.builtin.git:
+        repo: https://github.com/WebDesignMastery/RayalPark_25-12-23
+        dest: /var/www/html/web
+        update: true
+
+    - name: Restart Apache
+      ansible.builtin.service:
+        name: apache2
+        state: restarted
+
