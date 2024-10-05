@@ -17,11 +17,17 @@ Additionally, the infrastructure is provisioned using Terraform, which sets up t
 1. Run the playbook.
    ```bash
    ansible-playbook -i inventory web.yaml
-
+![image](https://github.com/AyaOmer/Ansible-Web-Deployment/blob/master/snap%20shot/Ubuntu-2024-10-05-19-35-45.png)
+##
+ ![image](https://github.com/AyaOmer/Ansible-Web-Deployment/blob/master/snap%20shot/website%20photo.PNG)
 ## Infrastructure Details
 The infrastructure for this project is provisioned using Terraform. It includes:
 
 - Two EC2 instances
+  ![image](https://github.com/AyaOmer/Ansible-Web-Deployment/blob/master/snap%20shot/ec2.PNG)
 - A load balancer
-You can find the Terraform configuration and more details in this repository.
+  ![image](https://github.com/AyaOmer/Ansible-Web-Deployment/blob/master/snap%20shot/load%20balancer.PNG)
+ 
+  
+#### You can find the Terraform configuration and more details in this repository.
 https://github.com/AyaOmer/Secure-Cloud-Architecture_using-Terrraform  
